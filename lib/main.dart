@@ -5,6 +5,7 @@ import 'package:flutter_example/module/buttonMod.dart';
 import 'package:flutter_example/module/containerMod.dart';
 import 'package:flutter_example/module/materialAppMod.dart';
 import 'package:flutter_example/module/scaffoldMod.dart';
+import 'package:flutter_example/module/snackBarMod.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ButtonMod(),
+      home: SnackBarMod(),
     );
   }
 }
