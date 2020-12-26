@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_example/module/TextMod.dart';
 import 'package:flutter_example/module/appBarMod.dart';
+import 'package:flutter_example/module/buttonMod.dart';
 import 'package:flutter_example/module/containerMod.dart';
 import 'package:flutter_example/module/materialAppMod.dart';
 import 'package:flutter_example/module/scaffoldMod.dart';
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: TextMod(),
+      home: ButtonMod(),
     );
   }
 }
