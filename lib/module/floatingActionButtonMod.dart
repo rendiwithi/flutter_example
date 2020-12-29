@@ -142,9 +142,42 @@ class FloatingActionButtonMod extends StatelessWidget {
                               ),
                             )),
                       ),
+                      FloatingActionButton(
+                        onPressed: () {},
+                        mini: true,
+                        elevation: 0,
+                        child: Image.network(
+                            "https://www.transparentpng.com/thumb/facebook-logo/facebook-icon-transparent-background-20.png"),
+                      ),
+                      FloatingActionButton(
+                        onPressed: () {},
+                        mini: true,
+                        elevation: 0,
+                        child: Image.network(
+                            "https://www.transparentpng.com/thumb/facebook-logo/facebook-icon-transparent-background-20.png"),
+                      ),
                     ],
                   ),
                 ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Tidak Punya Akun? ",
+                      style: TextStyle(
+                          fontSize: 11,
+                          color: Colors.grey,
+                          fontWeight: FontWeight.w500),
+                    ),
+                    Text(
+                      "Sign Up",
+                      style: TextStyle(
+                          fontSize: 11,
+                          color: Color(0xFF67B26F),
+                          fontWeight: FontWeight.w700),
+                    ),
+                  ],
+                )
               ],
             ),
           )
