@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_example/module/tabBarMod.dart';
+import 'package:flutter_example/module/qrGenerator.dart';
+
+import 'package:flutter_example/module/qrScanMod.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
     //   ]);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: TabBarMod(),
+      home: QrGeneratorMod(),
       // home: Scaffold(
       //   appBar: PreferredSize(
       //     preferredSize: Size.fromHeight(300),
