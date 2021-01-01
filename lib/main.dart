@@ -1,15 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_example/module/TextMod.dart';
-import 'package:flutter_example/module/appBarMod.dart';
-import 'package:flutter_example/module/buttonMod.dart';
-import 'package:flutter_example/module/clipRectMod.dart';
-import 'package:flutter_example/module/containerMod.dart';
-import 'package:flutter_example/module/floatingActionButtonMod.dart';
-import 'package:flutter_example/module/materialAppMod.dart';
-import 'package:flutter_example/module/opacity.dart';
-import 'package:flutter_example/module/scaffoldMod.dart';
-import 'package:flutter_example/module/snackBarMod.dart';
+import 'package:flutter_example/module/tabBarMod.dart';
 
 void main() => runApp(MyApp());
 
@@ -26,7 +17,29 @@ class MyApp extends StatelessWidget {
     //   ]);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ClipRectMod(),
+      home: TabBarMod(),
+      // home: Scaffold(
+      //   appBar: PreferredSize(
+      //     preferredSize: Size.fromHeight(300),
+      //     child: AppBar(
+      //       backgroundColor: Colors.amber,
+      //       flexibleSpace: Positioned(
+      //         bottom: 0,
+      //         right: 0,
+      //         child: Container(
+      //           margin: EdgeInsets.all(20),
+      //           child: Text(
+      //             "Ya Itulah",
+      //               style: TextStyle(
+      //                 color: Colors.white,
+      //                 fontSize: 20,
+      //                 fontWeight: FontWeight.w700,
+      //               )),
+      //         ),
+      //       ),
+      //     ),
+      //   ),
+      // ),
     );
   }
 }
