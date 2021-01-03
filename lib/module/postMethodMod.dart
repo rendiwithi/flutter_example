@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_example/API/post_result_model.dart';
+import 'package:flutter_example/API/get_result_model.dart';
 
 class PostMethodMod extends StatefulWidget {
   @override
@@ -8,7 +9,7 @@ class PostMethodMod extends StatefulWidget {
 
 class _PostMethodModState extends State<PostMethodMod> {
   PostResult postResult = null;
-
+  User user = null;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,6 +20,7 @@ class _PostMethodModState extends State<PostMethodMod> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
+            Text("Your ID"),
             Text((postResult != null)
                 ? postResult.id +
                     "|" +
@@ -28,11 +30,19 @@ class _PostMethodModState extends State<PostMethodMod> {
                     "|" +
                     postResult.created
                 : "Data Tidak Ditemukan"),
+            Text("Your Teacher ID"),
+            Text((user != null)
+                ? user.id + "|" + user.name
+                : "Data Tidak  Ditemukan"),
             RaisedButton(
               onPressed: () {
                 PostResult.connectToAPI("Rendi", "Flutter Developer")
                     .then((value) {
                   postResult = value;
+                  setState(() {});
+                });
+                User.connectToApi("3").then((valueGet) {
+                  user = valueGet;
                   setState(() {});
                 });
               },
