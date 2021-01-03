@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_example/module/clipPathMod.dart';
-import 'package:flutter_example/module/postMethodMod.dart';
+import 'package:flutter_example/module/qrGenerator.dart';
 import 'package:flutter_example/module/richTextMod.dart';
 
 void main() => runApp(MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
     //   ]);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: PostMethodMod(),
+      home: QrGeneratorMod(),
       // home: Scaffold(
       //   appBar: PreferredSize(
       //     preferredSize: Size.fromHeight(300),
