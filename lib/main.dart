@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
-import 'package:flutter_example/module/clipPathMod.dart';
-=======
+
 import 'package:flutter_example/module/getData.dart';
 import 'package:flutter_example/module/postMethodMod.dart';
->>>>>>> Api
 import 'package:flutter_example/module/qrGenerator.dart';
 import 'package:flutter_example/module/richTextMod.dart';
 
