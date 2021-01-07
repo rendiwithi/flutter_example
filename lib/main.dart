@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     //   ]);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: GetData(),
+      home: BelajarGetData(),
       // home: Scaffold(
       //   appBar: PreferredSize(
       //     preferredSize: Size.fromHeight(300),

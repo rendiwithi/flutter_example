@@ -1,36 +1,42 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_example/API/user_get_data.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
-class GetData extends StatefulWidget {
-  @override
-  _GetDataState createState() => _GetDataState();
-}
-
-class _GetDataState extends State<GetData> {
-  String output = "No Data";
+class BelajarGetData extends StatelessWidget {
+  final String apiUrl = "https://reqres.in/api/users?per_page=15";
+  Future<List<dynamic>> _fecthDataUsers() async {
+    var result = await http.get(apiUrl);
+    return json.decode(result.body)['data'];
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Api Get Data"),
+        title: Text('Belajar GET HTTP'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Text(output),
-            RaisedButton(
-              onPressed: () {
-                User.getUser("2").then((users) {
-                  output = "";
-                  for (int i = 0; i < users.length; i++)
-                    output = output + "[" + users[i].name + "]";
-                  setState(() {});
-                });
-              },
-              child: Text("Get Data"),
-            ),
-          ],
+      body: Container(
+        child: FutureBuilder<List<dynamic>>(
+          future: _fecthDataUsers(),
+          builder: (BuildContext context, AsyncSnapshot snapshot) {
+            if (snapshot.hasData) {
+              return ListView.builder(
+                  padding: EdgeInsets.all(10),
+                  itemCount: snapshot.data.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return ListTile(
+                      leading: CircleAvatar(
+                        radius: 30,
+                        backgroundImage:
+                            NetworkImage(snapshot.data[index]['avatar']),
+                      ),
+                      title: Text(snapshot.data[index]['first_name'] + " " + snapshot.data[index]['last_name']),
+                      subtitle: Text(snapshot.data[index]['email']),
+                    );
+                  });
+            } else {
+              return Center(child: CircularProgressIndicator());
+            }
+          },
         ),
       ),
     );
