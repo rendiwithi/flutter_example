@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_example/module/animatedSwitcherMod.dart';
 
 import 'package:flutter_example/module/getData.dart';
 import 'package:flutter_example/module/postMethodMod.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
     //   ]);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: BelajarGetData(),
+      home: AnimatedSwitcherMod(),
       // home: Scaffold(
       //   appBar: PreferredSize(
       //     preferredSize: Size.fromHeight(300),
