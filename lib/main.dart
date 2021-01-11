@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_example/module/animatedSwitcherMod.dart';
 
 import 'package:flutter_example/module/getData.dart';
+import 'package:flutter_example/module/multPproviderMod.dart';
 import 'package:flutter_example/module/postMethodMod.dart';
 import 'package:flutter_example/module/qrGenerator.dart';
 import 'package:flutter_example/module/richTextMod.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
     //   ]);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: StateManagementMod(),
+      home: MultiProviderMod(),
       // home: Scaffold(
       //   appBar: PreferredSize(
       //     preferredSize: Size.fromHeight(300),
