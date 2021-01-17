@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_example/module/animatedSwitcherMod.dart';
+import 'package:flutter_example/module/bloc_statement_mod.dart';
 
 import 'package:flutter_example/module/getData.dart';
 import 'package:flutter_example/module/multPproviderMod.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
     //   ]);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MultiProviderMod(),
+      home: BlocStatementMod(),
       // home: Scaffold(
       //   appBar: PreferredSize(
       //     preferredSize: Size.fromHeight(300),
